@@ -5,7 +5,7 @@ function V = volatility(network)
 %
 %   INPUT:
 %
-%           network  =     [Node X Node X Time] 3-dimensinoal array of adjacency matrices over time.    
+%           network  =     [Node X Node X Time] 3-dimensional array of adjacency matrices over time.    
 %
 %   OUTPUT:
 %
