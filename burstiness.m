@@ -31,8 +31,8 @@ for i = 1:size(network,1)
             end
         end
     ICT = diff(find(contact == 1));                                         % Find the inter-contact times (the length of time it takes for node i to connect with node j).
-    B(i,j) = ((std(ICT)/mean(ICT)) - 1) / ((std(ICT)/mean(ICT)) + 1);       % Calculate the burstiness coefficient, which compares the distribution of inter-contact times 
-    end                                                                     % in the network to a random (poisson) distribution.
+    B(i,j) = ((std(ICT)/mean(ICT)) - 1) / ((std(ICT)/mean(ICT)) + 1);       % Calculate the burstiness coefficient. 
+    end                                                                     
 end
 
 B = nanmean(B);
