@@ -4,11 +4,11 @@ function data = BVA2Matlab(filename)
 %
 %   INPUT:
 %
-%       filename    =     'File location' character string indexing the export location (Example: 'C:\BVA\Export');
+%       filename    =     'File location' character string indexing the export location (Example: 'C:\BVA\Export').
 %
 %   OUTPUT:
 %
-%       data        =     Fieltrip structure obtained from ft_preprocessing 
+%       data        =     Fieltrip structure obtained from ft_preprocessing.
 %
 %%
 
