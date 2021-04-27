@@ -48,7 +48,7 @@ for n = 1:length(A)
     end
 end
 
-SimilarityMat = communitySimilarity(A_mat,B_mat);                   % Assess the similarity of each community in 'A_mat' with each community in 'B-mat' 
+SimilarityMat = communitySimilarity(A_mat,B_mat);                   % Assess the similarity of each community in 'A_mat' with each community in 'B_mat' 
 [simOfNeighbour,locationSimNeighbour] = max(SimilarityMat);         % using the function 'communitySimilarity'.
         
 numa = unique(staticCS(:,timeOne));
