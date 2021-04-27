@@ -6,7 +6,7 @@ function adjmat = connectivity(subjdat,freqRange,srate)
 %   INPUT:
 %
 %               subjdat    =    Preprocessed single trial data in a fieldtrip structure, as obtained from ft_preprocessing (or BVAtoMatlab).
-%               freqRane   =    Vector with frequency-bands to be used in analyses (i.e. [1 3; 4 7; 8 12; 13 30; 31 90]).
+%               freqRange   =    Vector with frequency-bands to be used in analyses (i.e. [1 3; 4 7; 8 12; 13 30; 31 90]).
 %               srate      =    Sampling rate in Hz.
 %
 %   OUTPUT:
@@ -63,7 +63,7 @@ parfor fq = 1:length(freqRange)
   
   for tt = 1:numTrials
     for kk = 1:numSources
-      ts = p.prefilter(catmatrix(:,tt,kk));                                                 % Mean center or z-score the timeseries before filtering
+      ts = p.prefilter(catmatrix(:,tt,kk));                                                 % Mean center the timeseries before filtering
       H_data(:,tt,kk) = hilbert(p.filterfn(p.fir_coef{fq}, 1, ts));                         % Filter the data, calculate the hilbert transform, get the instantaneous phase
     end
   end
