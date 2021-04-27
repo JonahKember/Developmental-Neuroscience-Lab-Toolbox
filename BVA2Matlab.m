@@ -1,6 +1,6 @@
 function data = BVA2Matlab(filename)
 %   
-%   Import data preprocessed in Brain Vision Analyzer for use in MATLAB and Fieldtrip.
+%   Import data preprocessed in Brain Vision Analyzer to MATLAB for use in Fieldtrip.
 %
 %   INPUT:
 %
