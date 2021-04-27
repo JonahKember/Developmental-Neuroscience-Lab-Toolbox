@@ -26,7 +26,8 @@ for n = 1:length(vmrk)
 t = vmrk(n).type;                                                           % Examine the marker file to find the length of each trial
     if strcmp(t,'New Segment')                                              % and the start/end time.
     findTrial = [findTrial;vmrk(n).sample]; %#ok<AGROW>
-    elseif strcmp(t,'Time 0')
+    end
+    if strcmp(t,'Time 0')
     findTime = [findTime;vmrk(n).sample]; %#ok<AGROW>
     end    
 end
