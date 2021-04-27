@@ -4,7 +4,7 @@ function data = BVA2Matlab(filename)
 %
 %   INPUT:
 %
-%       filename    =     'File location' character string indexing the export location (Example: 'C:\BVA\Export').
+%       filename    =     'File location' character string indexing the location at which data was exported to from BVA (Example: 'C:\BVA\Export').
 %
 %   OUTPUT:
 %
