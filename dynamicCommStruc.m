@@ -48,8 +48,13 @@ for n = 1:length(A)
     end
 end
 
-SimilarityMat = communitySimilarity(A_mat,B_mat);                   % Assess the similarity of each community in 'A_mat' with each community in 'B_mat' 
-[simOfNeighbour,locationSimNeighbour] = max(SimilarityMat);         % using the function 'communitySimilarity'.
+SimilarityMat = communitySimilarity(A_mat,B_mat);                               % Assess the similarity of each community in 'A_mat' with each community in 'B_mat'.
+
+if size(SimilarityMat,1) == 1
+     SimilarityMat = vertcat(SimilarityMat,zeros(1,size(SimilarityMat,2)));     % If the similarity matrix returned by 'communitySimilarity' only consists of one row, 
+end                                                                             % add a second row of zeros so that the 'max' function in line 57 behaves the same way.                                                                   
+
+[simOfNeighbour,locationSimNeighbour] = max(SimilarityMat);                    
         
 numa = unique(staticCS(:,timeOne));
 numb = unique(staticCS(:,timeTwo));
@@ -68,4 +73,3 @@ staticCS(:,timeTwo) = Change;
 dynamicCommStruc = staticCS;
 
 end
-
