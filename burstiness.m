@@ -20,12 +20,14 @@ function B = burstiness(network)
 %
 %%
 
-B = zeros(128,128);
+nNodes = size(network,1);
+time = size(network,3);
+B = zeros(nNodes);
 
-for i = 1:size(network,1)
-    for j = 1:size(network,1)
-    contact = zeros(1,size(network,3));
-        for t = 1:size(network,3)
+for i = 1:nNodes
+    for j = 1:nNodes
+    contact = zeros(1,time);
+        for t = 1:time
             if network(i,j,t) == 1
                 contact(t) = 1;
             end
