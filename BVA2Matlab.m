@@ -55,3 +55,4 @@ end
 dat.time = ftTime;
 dat.trial = ftTrial;
 data = ft_preprocessing([], dat);                                           % Run the data structure through fieldtrip's preprocessing function.
+end
