@@ -1,5 +1,4 @@
 ## Developmental Neuroscience Lab
-### Brock University
 
 MATLAB toolbox for the analysis of EEG data (ERPs, time-frequency, and network analyses).
 
