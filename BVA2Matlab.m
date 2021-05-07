@@ -32,10 +32,15 @@ t = vmrk(n).type;                                                           % Ex
     end    
 end
 
-trialLength = findTrial(2) - findTrial(1);                                  % Define the length of each trial, the start time, the end time,
-StartTime = -(findTime(1) - 1)/vhdr.Fs;                                     % and the number of trials.
-EndTime = StartTime + (trialLength/vhdr.Fs);                                
-numTrial = size(dat.dataset,2)/trialLength;                                 
+if length(findTrial) == 1
+trialLength = size(dat.dataset,2)/(vhdr.Fs);                                % Check if the data is 1 trial long (ERP), or greater than 1 trial long  
+else                                                                        % (time-frequency analyses).
+trialLength = findTrial(2) - findTrial(1);                                  
+end
+
+StartTime = -(findTime(1) - 1)/vhdr.Fs;                                     
+EndTime = StartTime + (trialLength/vhdr.Fs);                                % Define the length of each trial, the start time, the end time, and 
+numTrial = size(dat.dataset,2)/trialLength;                                 % the number of trials.
 
 ftTime = [];
 ftTrial = [];
