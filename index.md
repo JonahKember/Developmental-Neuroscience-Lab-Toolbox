@@ -1,6 +1,3 @@
-## Developmental Neuroscience Lab
-
-MATLAB toolbox for the analysis of EEG data (ERPs, time-frequency, and network analyses).
 
 ### Getting Started
 Importing Data from Bran Vision Analyzer to MATLAB
