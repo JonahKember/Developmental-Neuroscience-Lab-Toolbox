@@ -1,4 +1,4 @@
-<!--layout: page title: "PAGE TITLE" permalink: gh-pages/Preprocessing_Videos/-->
+<!--layout: page title: "Preprocessing Videos" permalink: Preprocessing_Videos-->
 
 ## Preprocessing Videos
 
