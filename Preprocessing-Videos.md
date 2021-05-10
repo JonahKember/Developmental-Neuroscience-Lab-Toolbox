@@ -1,3 +1,5 @@
+<!--layout: page title: "PAGE TITLE" permalink: /Preprocessing_Videos/-->
+
 ## Preprocessing Videos
 
 Importing Data from BVA to Matlab:
