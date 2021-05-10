@@ -1,4 +1,4 @@
-<!--layout: page title: "PAGE TITLE" permalink: /Findings/-->
+<!--layout: page title: "PAGE TITLE" permalink: /Preprocessing-Videos/-->
 
 ## Preprocessing Videos
 
