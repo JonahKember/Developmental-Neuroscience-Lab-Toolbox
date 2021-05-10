@@ -1,6 +1,6 @@
 # Developmental Neuroscience Lab
 
-![image](https://user-images.githubusercontent.com/81769550/117694368-1376f400-b18d-11eb-9694-80475c8a4ad6.png)
+![image](https://user-images.githubusercontent.com/81769550/117694467-2db0d200-b18d-11eb-8a67-48c89e471847.png)
 
 ## Getting Started
 
