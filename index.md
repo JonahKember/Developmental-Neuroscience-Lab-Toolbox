@@ -1,3 +1,4 @@
+# Developmental Neuroscience Lab
 ## Getting Started
 
 ### [Preprocessing Videos](https://jonahkember.github.io/Developmental-Neuroscience-Lab-Toolbox/Preprocessing_Videos)
