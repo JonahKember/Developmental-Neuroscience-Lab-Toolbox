@@ -7,7 +7,7 @@ function [beta,R2] = LASSO(X,Y,k,rep)
 %           X     =     [Observations X Features] Predictor variables
 %           Y     =     Outcome variable
 %           k     =     k-fold cross-validation
-%           rep   =     Number of cross-validation repetitions (5 recommended; 0 required)
+%           rep   =     Number of cross-validation repetitions (5 recommended; min 2 required)
 %
 %   OUTPUT
 %
