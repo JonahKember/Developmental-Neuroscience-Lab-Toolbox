@@ -4,7 +4,7 @@
 
 ## Getting Started
  
-### [Series of videos](https://jonahkember.github.io/Developmental-Neuroscience-Lab-Toolbox/Preprocessing_Videos) on preprocessing EEG data using Brain Vision Analyzer:
+### [Series of videos](https://jonahkember.github.io/Developmental-Neuroscience-Lab-Toolbox/Preprocessing_Videos) on preprocessing EEG data using Brain Vision Analyzer.
 
 ## Useful Resources
 ### [S. Luck Book](https://github.com/JonahKember/Developmental-Neuroscience-Lab-Toolbox/tree/gh-pages/Luck-Book)
