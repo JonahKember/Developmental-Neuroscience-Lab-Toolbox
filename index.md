@@ -1,6 +1,6 @@
 ## Getting Started
 
-### [Preprocessing Videos](https://github.com/JonahKember/Developmental-Neuroscience-Lab-Toolbox/gh-pages/Preprocessing-Videos)
+### [Preprocessing Videos](https://github.com/JonahKember/Developmental-Neuroscience-Lab-Toolbox/gh-pages/Preprocessing_Videos)
 
 ## Useful Resources
 ### [S. Luck Book](https://github.com/JonahKember/Developmental-Neuroscience-Lab-Toolbox/tree/gh-pages/Luck-Book)
