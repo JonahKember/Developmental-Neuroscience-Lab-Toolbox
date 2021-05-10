@@ -1,4 +1,7 @@
 # Developmental Neuroscience Lab
+
+![image](https://user-images.githubusercontent.com/81769550/117694368-1376f400-b18d-11eb-9694-80475c8a4ad6.png)
+
 ## Getting Started
 
 ### [Preprocessing Videos](https://jonahkember.github.io/Developmental-Neuroscience-Lab-Toolbox/Preprocessing_Videos)
