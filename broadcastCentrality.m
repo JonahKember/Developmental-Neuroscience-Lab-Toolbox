@@ -1,4 +1,4 @@
-function [nodeBC, globalBC] = dynamicEfficiency(Network)
+function [nodeBC, globalBC] = broadcastCentrality(Network)
 %%
 %       Here, dynamic efficiency is measured as the mean broadcast centrality. Broadcast centrality measures the potential
 %       for each node to communicate with every other node in the network (along temporal paths) over the course of the networks 
