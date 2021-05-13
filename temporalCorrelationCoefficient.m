@@ -12,7 +12,6 @@ function [TCC,TCCi] = temporalCorrelationCoefficient(network)
 %
 %       TCC        =    Average temporal correlation coefficient across all nodes
 %       TCCi       =    Vector of the temporal correalation coefficient of each nodes
-%
 %%
 
 nNodes = size(network,1);
