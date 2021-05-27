@@ -13,7 +13,7 @@ function stat = erpStats(subj1,subj2,avgOverTime,latency,neighbours)
 %       allSubjCond1    =   Array with all subjects in condition 1 (see 'collectParticipants').
 %       allSubjCond2    =   Array with all subjects in condition 2 (see 'collectParticipants').
 %       avgOverTime     =   Average over time window, accepts input 'yes' or 'no'.
-%       latency         =   [StartTime EndTime] Time-window for statistic test, in milliseconds. 
+%       latency         =   [StartTime EndTime] Time-window for statistic test, in seconds. 
 %
 %   OUTPUT
 %
