@@ -10,8 +10,8 @@ function stat = erpStats(subj1,subj2,avgOverTime,latency,neighbours)
 %
 %   INPUTS
 %
-%       subj1           =   Array with all subjects in condition 1 (see 'collectParticipants').
-%       subj2           =   Array with all subjects in condition 2 (see 'collectParticipants').
+%       allSubjCond1    =   Array with all subjects in condition 1 (see 'collectParticipants').
+%       allSubjCond2    =   Array with all subjects in condition 2 (see 'collectParticipants').
 %       avgOverTime     =   Average over time window, accepts input 'yes' or 'no'.
 %       latency         =   [StartTime EndTime] Time-window for statistic test, in milliseconds. 
 %
@@ -22,10 +22,10 @@ function stat = erpStats(subj1,subj2,avgOverTime,latency,neighbours)
 %   *** Note: Format for test is (Condition1 - Condition2).
 %%
 
-numSubj = length(subj1);
+numSubj = length(allSubjCond1);
 
 cfg = []; 
-cfg.channel = subj1{1, 1}.label; 
+cfg.channel = allSubjCond1{1, 1}.label; 
 cfg.neighbours = neighbours; 
 cfg.latency = latency; 
 cfg.avgovertime = avgOverTime; 
@@ -46,5 +46,5 @@ cfg.design(2,1:2*(numSubj))  = [1:(numSubj) 1:(numSubj)];
 cfg.ivar = 1;  
 cfg.uvar = 2;   
 
-stat = ft_timelockstatistics(cfg, subj1{:}, subj2{:});
+stat = ft_timelockstatistics(cfg, allSubjCond1{:}, allSubjCond2{:});
 end
