@@ -1,4 +1,4 @@
 %% Import Data
 
-fileLocation = 'D:\AXCPT\Raw_data\Jonah_BVA\Export';
+fileLocation = 'C:\BVA\Export';
 impBVA(fileLocation)
