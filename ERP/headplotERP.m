@@ -1,8 +1,9 @@
-function headplotERP(stat,lay)
+function headplotERP(stat,layout)
 
+layout = layout.layout;
 cfg = [];
 cfg.alpha = .05;
-cfg.layout = lay;
+cfg.layout = layout;
 cfg.size = [1 1];
 cfg.zlim = [-3 3];    % Voltage range for head map colouring
 
