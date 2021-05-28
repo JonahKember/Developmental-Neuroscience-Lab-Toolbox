@@ -1,5 +1,8 @@
 function [cfg] = readStat(stat,alpha)
 
+% Reads statistics from cluster-based permutation tests. Edited from ft_clusterplot.
+
+
 cfg = [];
 cfg.alpha = alpha;
 
