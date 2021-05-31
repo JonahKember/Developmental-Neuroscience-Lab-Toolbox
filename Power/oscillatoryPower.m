@@ -1,8 +1,5 @@
 function timeFreq = oscillatoryPower(data,freq)
 %
-%   Time-frequency analysis of single-trial EEG data. Returns oscillatory power over time, 
-%   relative to a baseline from -500 to -200ms, for specified frequencies.
-%   
 %   INPUTS
 %   
 %       data       =    Single trial EEG data, as obtained from BVA2Matlab.
