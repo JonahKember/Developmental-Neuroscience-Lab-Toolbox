@@ -1,5 +1,4 @@
 function ttestRunning(a,b,per,p_val)
-
 tic
 if size(a,1) ~= size(b,1)
 disp('Error: Inputs are different lengths!')
