@@ -1,5 +1,4 @@
 function rSquared = rSquared(y,predictedY)
-
 SST = 0;
 SSE = 0;
 for n = 1:length(y)
