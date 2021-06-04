@@ -9,7 +9,7 @@ if contains(cfg.latencyType,'time')
 end
 
 if ~isempty(cfg.freq)
-    data = mean(data.powspctrm(cfg.channel,cfg.freq,cfg.latency(1):cfg.latency(2)),'all');
+    data = mean(data.powspctrm(cfg.channel,cfg.freq(1):cfg.freq(2),cfg.latency(1):cfg.latency(2)),'all');
 else
     data = mean(data.avg(cfg.channel,cfg.latency(1):cfg.latency(2)),'all');
 end
