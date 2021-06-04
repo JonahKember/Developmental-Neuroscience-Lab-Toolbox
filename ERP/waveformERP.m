@@ -1,5 +1,9 @@
 function  waveformERP(cfg,GACond1,GACond2)
 
+if ~isnumeric(cfg.channels)
+    cfg.channels = channelIndex(cfg.channel,GACond1.label);
+end
+
 if contains(cfg.colour,'yes')
     plot(GACond1.time,mean(GACond1.avg(cfg.channels,:),1))
     hold on
