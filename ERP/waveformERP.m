@@ -1,7 +1,7 @@
 function  waveformERP(cfg,GACond1,GACond2)
 
 if ~isnumeric(cfg.channels)
-    cfg.channels = channelIndex(cfg.channel,GACond1.label);
+    cfg.channels = channelIndex(cfg.channel,GACond1);
 end
 
 if contains(cfg.colour,'yes')
