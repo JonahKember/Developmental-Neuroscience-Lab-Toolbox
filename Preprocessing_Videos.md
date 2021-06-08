@@ -14,6 +14,9 @@
 #4 Ocular Correction, Baseline Correction, and Artifact Rejection
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HR2WyTR4N7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Ocular Correction Using ICA
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2gVijOSDpn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 #5 Averaging and Exporting
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A7OyCrdt3Eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
