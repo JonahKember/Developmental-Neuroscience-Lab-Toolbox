@@ -1,4 +1,4 @@
-function adjmat = connectivityRestState(subjdat,freqRange,srate)
+function adjmat = connectivityRestState(subjdat,freqRange,srate,directed)
 %       
 %   Use the phase-lag index (PLI) to analyze connectivity between EEG sensors. To analyze PLI for resting state data, use the time-series of phase differences within
 %   each trial (phase difference between two signals at each time point) as an input into PLI calculations.
@@ -6,8 +6,9 @@ function adjmat = connectivityRestState(subjdat,freqRange,srate)
 %   INPUT:
 %
 %               subjdat    =    Preprocessed single trial data in a fieldtrip structure, as obtained from ft_preprocessing (or BVAtoMatlab).
-%               freqRange   =   Vector with frequency-bands to be used in analyses (i.e. [1 3; 4 7; 8 12; 13 30; 31 90]).
+%               freqRange  =    Vector with frequency-bands to be used in analyses (i.e. [1 3; 4 7; 8 12; 13 30; 31 90]).
 %               srate      =    Sampling rate in Hz.
+%               directed   =    0 = Phase-Lag Index (PLI, Default); 1 = Directed Phase-Lag Index(dPLI)
 %
 %   OUTPUT:
 %
@@ -58,12 +59,14 @@ parfor fq = 1:length(freqRange)
       H_data(:,tt,kk) = hilbert(p.filterfn(p.fir_coef{fq}, 1, ts));                         % Filter the data, calculate the hilbert transform, get the instantaneous phase
     end
   end
-  
+
 %%
 
 nTrial = size(H_data,2);
 nSource = size(H_data,3);
 a = zeros(nSource,nSource,nTrial);
+
+%% Phase-Lag Index
 
 for trial = 1:nTrial
     adjmatTrial = zeros(nSource,nSource);
@@ -77,6 +80,23 @@ for trial = 1:nTrial
 end
 
 adjmat(:,:,:,fq) = a;
+
+%% Directed Phase-Lag Index
+
+if directed == 1
+    for trial = 1:nTrial
+        adjmatTrial = zeros(nSource,nSource);
+        for i = 1:nSource
+            for j = 1:nSource
+
+                phaseDiff = angle(H_data(:,trial,i)) - angle(H_data(:,trial,j));
+                adjmatTrial(i,j) = mean(heavi(phaseDiff));
+
+            end
+        end
+        a(:,:,trial) = adjmatTrial;
+    end
+end
 
 toc
 end
