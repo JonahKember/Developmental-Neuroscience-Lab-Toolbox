@@ -8,7 +8,7 @@ function adjmat = connectivityRestState(subjdat,freqRange,srate,directed)
 %               subjdat    =    Preprocessed single trial data in a fieldtrip structure, as obtained from ft_preprocessing (or BVAtoMatlab).
 %               freqRange  =    Vector with frequency-bands to be used in analyses (i.e. [1 3; 4 7; 8 12; 13 30; 31 90]).
 %               srate      =    Sampling rate in Hz.
-%               directed   =    0 = Phase-Lag Index (PLI, Default); 1 = Directed Phase-Lag Index(dPLI)
+%               directed   =    0 : Phase-Lag Index (PLI); 1 : Directed Phase-Lag Index(dPLI)
 %
 %   OUTPUT:
 %
@@ -61,25 +61,26 @@ parfor fq = 1:length(freqRange)
   end
 
 %%
-
+  
 nTrial = size(H_data,2);
 nSource = size(H_data,3);
 a = zeros(nSource,nSource,nTrial);
 
 %% Phase-Lag Index
 
-for trial = 1:nTrial
-    adjmatTrial = zeros(nSource,nSource);
-    for i = 1:nSource
-        for j = 1:nSource
-            phaseDiff = angle(H_data(:,trial,i)) - angle(H_data(:,trial,j));
-            adjmatTrial(i,j) = abs(mean(sign(phaseDiff)));
+if directed == 0
+    for trial = 1:nTrial
+        adjmatTrial = zeros(nSource,nSource);
+        for i = 1:nSource
+            for j = 1:nSource
+                phaseDiff = angle(H_data(:,trial,i)) - angle(H_data(:,trial,j));
+                adjmatTrial(i,j) = abs(mean(sign(phaseDiff)));
+            end
         end
+        a(:,:,trial) = adjmatTrial;
     end
-    a(:,:,trial) = adjmatTrial;
-end
-
 adjmat(:,:,:,fq) = a;
+end
 
 %% Directed Phase-Lag Index
 
@@ -97,6 +98,7 @@ if directed == 1
         a(:,:,trial) = adjmatTrial;
     end
 end
-
+adjmat(:,:,:,fq) = a;
+end
 toc
 end
