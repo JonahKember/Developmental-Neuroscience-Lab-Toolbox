@@ -5,7 +5,7 @@
 
 ## Getting Started
 
-Access the [Child Mind Institute data](https://brocku.sharepoint.com/teams/Child-and-Youth-Studies--Developmental-Neuroscience-Lab/SitePages/Welcome.aspx) for use in Brain Vision Analyzer.
+Access the [Child Mind Institute data](https://brocku.sharepoint.com/teams/Child-and-Youth-Studies--Developmental-Neuroscience-Lab/Shared%20Documents/Forms/AllItems.aspx) for use in Brain Vision Analyzer.
 
 [Series of videos](https://jonahkember.github.io/Developmental-Neuroscience-Lab-Toolbox/Preprocessing_Videos) on preprocessing EEG data using Brain Vision Analyzer.
 
