@@ -9,5 +9,5 @@ function p = threshECO(nNodes)
 %   Information in Complex Brain Networks. PLoS Computational Biology, 13(1), e1005305–e1005305.
 %
 %%
-p = 3/(nNodes - 1);
+p = 3/(nNodes^-1);
 end
